@@ -1,5 +1,6 @@
-umd
+es
 node_modules
+umd
 /*.js
 !karma.conf.js
 !tests.webpack.js

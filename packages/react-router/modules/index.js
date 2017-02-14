@@ -1,12 +1,9 @@
-export {
-  matchPath,
-  withRouter,
-  Route,
-  Switch,
-  Router
-} from './Core'
-
 export MemoryRouter from './MemoryRouter'
-export ServerRouter from './ServerRouter'
-export Redirect from './Redirect'
 export Prompt from './Prompt'
+export Redirect from './Redirect'
+export Route from './Route'
+export Router from './Router'
+export StaticRouter from './StaticRouter'
+export Switch from './Switch'
+export matchPath from './matchPath'
+export withRouter from './withRouter'

@@ -1,6 +1,6 @@
 {
   "name": "react-router-dom",
-  "version": "1.0.0-beta.1",
+  "version": "4.0.0-beta.6",
   "description": "DOM bindings for React Router",
   "repository": "ReactTraining/react-router",
   "license": "MIT",
@@ -12,30 +12,37 @@
     "BrowserRouter.js",
     "HashRouter.js",
     "Link.js",
+    "MemoryRouter.js",
     "NavLink.js",
+    "Prompt.js",
+    "Redirect.js",
+    "Route.js",
+    "Router.js",
+    "StaticRouter.js",
+    "Switch.js",
     "index.js",
+    "matchPath.js",
+    "withRouter.js",
     "README.md",
+    "es",
     "umd"
   ],
   "main": "index.js",
+  "module": "es/index.js",
   "scripts": {
-    "release": "node ./scripts/release.js",
-    "build-lib": "babel ./modules -d . --ignore __tests__",
-    "build-umd": "webpack modules/index.js umd/react-router-dom.js",
-    "build-min": "webpack -p modules/index.js umd/react-router-dom.min.js",
-    "build": "node ./scripts/build.js",
+    "build": "node ./tools/build.js",
     "watch": "babel ./modules -d . --ignore __tests__ --watch",
-    "prepublish": "node ./scripts/build.js",
-    "clean": "git clean -fX .",
+    "prepublish": "node ./tools/build.js",
+    "clean": "git clean -e '!node_modules' -fdX .",
     "lint": "eslint modules",
     "test": "karma start --single-run"
   },
   "peerDependencies": {
-    "react": "15.x"
+    "react": ">=15"
   },
   "dependencies": {
     "history": "^4.5.1",
-    "react-router": "4.0.0-alpha.6"
+    "react-router": "^4.0.0-beta.6"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
@@ -61,8 +68,8 @@
     "karma-webpack": "^1.7.0",
     "mocha": "^2.5.3",
     "pretty-bytes": "^3.0.1",
-    "react": "^15.3.0",
-    "react-addons-test-utils": "^15.3.1",
+    "react": "^15.4.2",
+    "react-addons-test-utils": "^15.4.2",
     "react-dom": "^15.3.0",
     "readline-sync": "^1.4.4",
     "webpack": "^1.13.1",

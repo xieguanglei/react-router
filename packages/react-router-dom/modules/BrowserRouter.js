@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import createHistory from 'history/createBrowserHistory'
-import Router from 'react-router/Router'
+import { Router } from 'react-router'
 
 /**
  * The public API for a <Router> that uses HTML5 history.
@@ -11,10 +11,7 @@ class BrowserRouter extends React.Component {
     forceRefresh: PropTypes.bool,
     getUserConfirmation: PropTypes.func,
     keyLength: PropTypes.number,
-    children: PropTypes.oneOfType([
-      PropTypes.func,
-      PropTypes.node
-    ])
+    children: PropTypes.node
   }
 
   history = createHistory(this.props)

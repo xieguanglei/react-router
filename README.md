@@ -11,7 +11,13 @@ React Router keeps your UI in sync with the URL. Make the URL your first thought
 
 ## Docs
 
-API docs are [here](/packages/react-router-website/api).
+API docs are [here](https://reacttraining.com/react-router/api).
+
+## Installation
+
+`npm install --save react-router@next` or `yarn add react-router@next`
+
+You can also install a specific router package via `react-router-[package]@next`. All possible packages are available [here](https://github.com/ReactTraining/react-router/tree/v4/packages).
 
 ## v4 FAQ
 
@@ -69,10 +75,6 @@ We will be creating some addons and hope to see others too.
 
 We have some code close to being published that will manage the scroll positions of window and individual elements.
 
-### What about Redux?
-
-We have [a `<ControlledRouter>` component](https://github.com/ReactTraining/react-router-addons-controlled) that makes redux integration with React Router the same as ... uh ... integrating an `<input>` with Redux.
-
 ### What about route transition hooks? (example needed)
 
 Because we are just components, you have the component lifecycle as transition hooks. They are completely parallel. The only difference is that the route transition hooks could be asynchronous. The problem with that was you weren't in the render lifecycle so you couldn't use React to indicate to the user something was happening.
@@ -118,7 +120,7 @@ We've never been more excited about React Router. It's no longer a router for Re
 
 ### Where are the examples?!?
 
-The examples are now located under [the website](/packages/react-router-website/examples).
+The examples are now located under [the website](https://reacttraining.com/react-router/examples).
 
 ## Thanks
 

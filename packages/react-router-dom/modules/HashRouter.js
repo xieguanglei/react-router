@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import createHistory from 'history/createHashHistory'
-import Router from 'react-router/Router'
+import { Router } from 'react-router'
 
 /**
  * The public API for a <Router> that uses window.location.hash.
@@ -10,10 +10,7 @@ class HashRouter extends React.Component {
     basename: PropTypes.string,
     getUserConfirmation: PropTypes.func,
     hashType: PropTypes.oneOf([ 'hashbang', 'noslash', 'slash' ]),
-    children: PropTypes.oneOfType([
-      PropTypes.func,
-      PropTypes.node
-    ])
+    children: PropTypes.node
   }
 
   history = createHistory(this.props)

@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import Route from 'react-router/Route'
+import { Route } from 'react-router'
 import Link from './Link'
 
 /**
@@ -7,6 +7,8 @@ import Link from './Link'
  */
 const NavLink = ({
   to,
+  exact,
+  strict,
   activeClassName,
   className,
   activeStyle,
@@ -16,8 +18,10 @@ const NavLink = ({
 }) => (
   <Route
     path={typeof to === 'object' ? to.pathname : to}
-    children={({ history, match }) => {
-      const isActive = !!(getIsActive ? getIsActive(match, history.location) : match)
+    exact={exact}
+    strict={strict}
+    children={({ location, match }) => {
+      const isActive = !!(getIsActive ? getIsActive(match, location) : match)
 
       return (
         <Link
@@ -33,6 +37,8 @@ const NavLink = ({
 
 NavLink.propTypes = {
   to: Link.propTypes.to,
+  exact: PropTypes.bool,
+  strict: PropTypes.bool,
   activeClassName: PropTypes.string,
   className: PropTypes.string,
   activeStyle: PropTypes.object,
